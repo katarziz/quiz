@@ -6,8 +6,60 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+* {
+  font-family: "Verdana", cursive, sans-serif;
+  color: #ffffff;
+}
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background-color: #444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+}
+
+.app {
+  flex-direction: column;
+}
+
+.windowed {
+  background-color: #264a25;
+  width: 450px;
+  min-height: 200px;
+  height: min-content;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 15px;
+  box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
+  justify-content: center;
+  display: grid;
+}
+
+button {
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #2e4a25;
+  border-radius: 15px;
+  display: flex;
+  padding: 5px;
+  margin: 10px;
+  justify-content: flex-start;
+  align-items: center;
+  border: 5px solid #256823;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #557d58;
+}
+
+button:disabled {
+  background-color: #777777;
+  border: 5px solid #444444;
 }
