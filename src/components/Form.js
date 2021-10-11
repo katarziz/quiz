@@ -28,22 +28,22 @@ const Form = () => {
     }
 
     switch (currentQuestion) {
-      case 0: case 1:
+      case 0: case 13:
         setCurrentInfo(0)
         break;
-      case 2: case 3: case 4:
+      case 1: case 2: case 3:
         setCurrentInfo(1)
         break;
-      case 5: case 6:
+      case 4: case 5:
         setCurrentInfo(2)
         break;
-      case 7: case 8:
+      case 6: case 7:
         setCurrentInfo(3)
         break;
-      case 9: case 10:
+      case 8: case 9:
         setCurrentInfo(4)
         break;
-      case 11: case 12: case 13:
+      case 10: case 11: case 12:
         setCurrentInfo(5)
         break;
       default:
@@ -84,7 +84,7 @@ const Form = () => {
       {showScore ?
         <>
           <div className='windowed'>
-            You scored {score} points
+            Du hast einen UmweltScore von {Math.round(score/76*100)} Prozent erreicht
             {showSubmit ?
               <button onClick={() => handleSubmit()}>
                 Submit my score

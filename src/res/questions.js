@@ -4,7 +4,7 @@ const questions = [
     answerOptions: [
       { answerText: 'Vegan', value: 10 },
       { answerText: 'Vegetarisch', value: 8 },
-      { answerText: 'Nein', value: 0 },
+      { answerText: 'Keins von beidem', value: 0 },
     ],
   },
   {
@@ -75,8 +75,8 @@ const questions = [
     questionText: 'Wie oft geht ihr in den Urlaub?',
     answerOptions: [
       { answerText: 'Ein bis zwei ferien', value: 4 },
-      { answerText: 'praktisch jede ferien', value: 1 },
-      { answerText: 'jede ferien', value: 0 },
+      { answerText: 'Praktisch jede ferien', value: 1 },
+      { answerText: 'Jede ferien', value: 0 },
     ],
   },
   {
@@ -96,7 +96,7 @@ const questions = [
     ],
   },
   {
-    questionText: 'Dentkst du an die kleinen Dinge? Licht, Plastik',
+    questionText: 'Denkst du an die kleinen Dinge? Licht, Plastik',
     answerOptions: [
       { answerText: 'Immer', value: 10 },
       { answerText: 'Oft', value: 5 },
