@@ -10,6 +10,7 @@ body {
   background-size: cover;
   min-height: 100vh;
 }
+
 * {
   font-family: "Roboto", sans-serif;
   color: #ffffff;
@@ -32,7 +33,7 @@ b {
 
 .windowed {
   background-color: #444;
-  width: 450px;
+  width: 80vw;
   height: min-content;
   border-radius: 15px;
   padding: 20px;
@@ -59,4 +60,10 @@ button:hover {
 button:disabled {
   background-color: #777777;
   border: 5px solid #444444;
+}
+
+@media (min-width: 500px) {
+  .windowed {
+    width: 500px;
+  }
 }
