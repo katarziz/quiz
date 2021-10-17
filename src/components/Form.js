@@ -93,11 +93,11 @@ const Form = () => {
             Du hast einen UmweltScore von {Math.round(score/76*100)} Prozent erreicht
             {showSubmit ?
               <button onClick={() => handleSubmit()}>
-                Submit my score
+                Mein Ergebnis absenden
               </button>
               :
               <button disabled>
-                Thank you for submitting your score
+                Danke, dass sie ihr Ergebnis geteilt haben
               </button>
             }
             <button onClick={() => handleReset()}>
@@ -105,7 +105,7 @@ const Form = () => {
             </button>
             <a href='https://github.com/Humboldt4Future'>
               <button>
-                Visit our Github
+                Schau dir unseren Code auf Github an
               </button>
             </a>
           </div>
