@@ -111,6 +111,22 @@ const questions = [
       { answerText: 'Zu wenig', value: 3 },
     ],
   },
+  {
+    questionText: 'Welche Schule besuchst du?',
+    answerOptions: [
+      { answerText: 'Das Humboldt-Gymnasium', value: 0 },
+      { answerText: 'Eine andere Schule', value: 0 },
+      { answerText: 'Ich gehe nicht zur Schule', value: 0 },
+    ],
+  },
+  {
+    questionText: 'Bist du in der Unter- Mittel- oder Oberstufe?',
+    answerOptions: [
+      { answerText: 'Unterstufe', value: 0 },
+      { answerText: 'Mittelstufe', value: 0 },
+      { answerText: 'Oberstufe', value: 0 },
+    ],
+  },
 ]
 
 export default questions;

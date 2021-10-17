@@ -10,9 +10,39 @@ const Form = () => {
   const [entryData, setEntryData] = useState([]);
 
   const handleAnswerButtonClick = (value, answerText) => {
+    switch (currentQuestion) {
+      case 0: case 15:
+        setCurrentInfo(0);
+        break;
+      case 1: case 2: case 3:
+        setCurrentInfo(1);
+        break;
+      case 4: case 5:
+        setCurrentInfo(2);
+        break;
+      case 6: case 7:
+        setCurrentInfo(3);
+        break;
+      case 8: case 9:
+        setCurrentInfo(4);
+        break;
+      case 10: case 11: case 12:
+        setCurrentInfo(5);
+        break;
+      case 13: case 14:
+        setCurrentInfo(6);
+        break;
+      default:
+        break;
+    }
     setScore(score + value);
     var inc = 1;
+    setEntryData(entryData => [...entryData, { answer: answerText }]);
     if (currentQuestion === 0 && value > 0) {
+      inc = 2;
+      setEntryData(entryData => [...entryData, { value: value }]);
+      setCurrentInfo(1);
+    } else if (currentQuestion === 14 && answerText === 'Ich gehe nicht zur Schule') {
       inc = 2;
       setEntryData(entryData => [...entryData, { value: value }]);
     }
@@ -22,32 +52,8 @@ const Form = () => {
     } else {
       setShowScore(true);
     }
-    setEntryData(entryData => [...entryData, { answer: answerText }]);
-    if (currentQuestion === 13) {
+    if (currentQuestion === 15||(currentQuestion === 14 && inc === 2)) {
       setEntryData(entryData => [...entryData, { score: (score + value) }]);
-    }
-
-    switch (currentQuestion) {
-      case 0: case 13:
-        setCurrentInfo(0)
-        break;
-      case 1: case 2: case 3:
-        setCurrentInfo(1)
-        break;
-      case 4: case 5:
-        setCurrentInfo(2)
-        break;
-      case 6: case 7:
-        setCurrentInfo(3)
-        break;
-      case 8: case 9:
-        setCurrentInfo(4)
-        break;
-      case 10: case 11: case 12:
-        setCurrentInfo(5)
-        break;
-      default:
-        break;
     }
   };
 

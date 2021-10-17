@@ -120,27 +120,11 @@ const infos = [
         Tips rausgesucht.`
     },
     {
-        thema: "heiztips",
-        text: `Tipps um günstig Strom zu sparen:
-        \n-Licht abdrehen wo es nicht gebraucht 
-        wird!\nSehr oft brennt in Räumen das 
-        Licht obwohl man sich im Nebenraum 
-        befindet. Durch diese einfache Maßnahme 
-        ist es möglich die Stromkosten zu 
-        senken, Energie zu sparen.\n-Neue 
-        Leuchtmittel durch sparsame ersetzen!\n
-        Nachdem alte Glühbirnen ausgebrannt 
-        sind, ist es sehr wenig Aufwand diese 
-        durch Energiespar Lampen oder LEDs zu 
-        ersetzten. Denn durch diese können im 
-        Vergleich bis zu 90% Energie eingespart 
-        werden.\n-LEDs als Alternative für 
-        normale Glühlampen\nVor allem in Räumen 
-        mit langer Aufhalte Dauer lohnt es sich 
-        LEDs zu verwenden. Alte bzw. normale 
-        Glühbirnen können in Räumen mit wenig 
-        Nutzen, wie Abstellkammern weiter 
-        benutzt werden bis sie ausbrennen`
+        thema: "schule",
+        text: `wir verwenden diese Daten 
+        ausschließlich um unsere Schule zu 
+        vergleichen. Niemand wird deine Antworten 
+        auf dich zurückführen können.`
     },
 ]
 
