@@ -1,10 +1,10 @@
 version: '3'
 services:
   server:
-    image: "marschi10000/h4f-server"
+    image: "server"
     ports:
       - "4999:4999"
-  app:
-    image: "marschi10000/h4f-app"
+  quiz:
+    image: "quiz"
     ports:
-      - "5000:5000"
+      - "3000:3000"
