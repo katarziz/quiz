@@ -12,7 +12,8 @@ body {
 }
 
 body {
-  background-color: #444;
+  background-image: url("https://c.pxhere.com/images/eb/0b/6c5f4bb5f46423d124737477c467-1594712.jpg!d");
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,9 +30,8 @@ div {
 }
 
 .windowed {
-  background-color: #264a25;
+  background-color: #444;
   width: 450px;
-  min-height: 200px;
   height: min-content;
   border-radius: 15px;
   padding: 20px;
