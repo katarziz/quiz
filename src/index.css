@@ -5,28 +5,29 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("https://c.pxhere.com/images/eb/0b/6c5f4bb5f46423d124737477c467-1594712.jpg!d");
+  /*Dieses Bild ist unter der CC0-Lizenz zum persönlichen und kommerziellen Gebrauch unter folgender Adresse erreichbar: https://pxhere.com/de/photo/1594712*/
+  background-size: cover;
+  min-height: 100vh;
 }
 * {
-  font-family: "Verdana", cursive, sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #ffffff;
 }
 
-body {
-  background-image: url("https://c.pxhere.com/images/eb/0b/6c5f4bb5f46423d124737477c467-1594712.jpg!d");
-  background-size: cover;
+body, div, .app, .windowed {
   display: flex;
-  justify-content: center;
   align-items: center;
-  min-height: 100vh;
-}
-
-div {
-  display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 
-.app {
-  flex-direction: column;
+h1, h3 {
+  margin-top: 0;
+}
+
+b {
+  color: #256823;
 }
 
 .windowed {
@@ -37,20 +38,16 @@ div {
   padding: 20px;
   margin: 15px;
   box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
-  justify-content: center;
-  display: grid;
 }
 
 button {
+  width: 100%;
   font-size: 16px;
   color: #ffffff;
   background-color: #2e4a25;
   border-radius: 15px;
-  display: flex;
   padding: 5px;
   margin: 10px;
-  justify-content: flex-start;
-  align-items: center;
   border: 5px solid #256823;
   cursor: pointer;
 }

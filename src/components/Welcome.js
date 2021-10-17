@@ -17,9 +17,9 @@ const Welcome = (x) => {
                     </div>
                     <div className='windowed'>
                         Am Ende des Quiz' hast du auch die Option deine Ergebnisse mit uns zu teilen.<br />
-                        Das ganze geschieht natürlich 100% Anonym und niemand wird deine Angaben auf dich zurückverfolgen können;<br />
+                        Das ganze geschieht natürlich 100% Anonym und niemand wird deine Angaben auf dich zurückverfolgen können.<br />
                         Deine Angaben werden einzig und allein dafür genutzt uns einen Überblick über das Umweltbewusstsein an unserer Schule und anderen zu geben.<br />
-                        Falls du dich davon selbst überzeugen möchtest gibt es am Ende einen Link über den du unseren Code einsehen kannst
+                        Falls du dich davon selbst überzeugen möchtest gibt es am Ende einen Link über den du unseren Code einsehen kannst.
                     </div>
                     <div className='windowed'>
                         <button onClick={() => setShowForm(true)}>

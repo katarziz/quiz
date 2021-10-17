@@ -52,7 +52,7 @@ const Form = () => {
     } else {
       setShowScore(true);
     }
-    if (currentQuestion === 15||(currentQuestion === 14 && inc === 2)) {
+    if (currentQuestion === 15 || (currentQuestion === 14 && inc === 2)) {
       setEntryData(entryData => [...entryData, { score: (score + value) }]);
     }
   };
@@ -90,7 +90,9 @@ const Form = () => {
       {showScore ?
         <>
           <div className='windowed'>
-            Du hast einen UmweltScore von {Math.round(score/76*100)} Prozent erreicht
+            <h3>
+              Du hast einen UmweltScore von <b>{Math.round(score / 76 * 100)}</b> Prozent erreicht
+            </h3>
             {showSubmit ?
               <button onClick={() => handleSubmit()}>
                 Mein Ergebnis absenden
@@ -103,31 +105,32 @@ const Form = () => {
             <button onClick={() => handleReset()}>
               Quiz neu starten
             </button>
-            <a href='https://github.com/Humboldt4Future'>
-              <button>
+            <a href='https://github.com/Humboldt4Future' style={{ width: '100%' }}>
+              <button style={{ marginLeft: '0' }}>
                 Schau dir unseren Code auf Github an
               </button>
             </a>
           </div>
           <div className='windowed'>
-            <h2>Unsere Quellen:</h2>
+            <h2>Unsere Empfehlungen:</h2>
             <a href='https://www.wwf.de/aktiv-werden/tipps-fuer-den-alltag/tipps-zur-plastikvermeidung/plastik-im-alltag-vermeiden/'>WWF - Plastik im Alltag vermeiden</a>
             <a href='https://www.greenpeace.de/themen/endlager-umwelt/plastikmuell/10-tipps-fuer-weniger-plastik'>Greenpeace - 10 Tipps für weniger Plastik</a>
+            Weitere im Kommen
           </div>
         </>
         :
         <>
           <div className='windowed'>
-            <div>
+            <h3>
               {questions[currentQuestion].questionText}
-            </div>
+            </h3>
             {questions[currentQuestion].answerOptions.map((answerOption, index) => (
               <button onClick={() => handleAnswerButtonClick(answerOption.value, answerOption.answerText)} key={index}>
                 {answerOption.answerText}
               </button>
             ))}
             <div>
-              <span> Frage {currentQuestion + 1}&nbsp; </span> / {questions.length}
+              Frage {currentQuestion + 1} / {questions.length}
             </div>
           </div>
           <div className='windowed'>
