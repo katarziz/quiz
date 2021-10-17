@@ -101,7 +101,7 @@ const Form = () => {
               </button>
             }
             <button onClick={() => handleReset()}>
-              Restart the Quiz
+              Quiz neu starten
             </button>
             <a href='https://github.com/Humboldt4Future'>
               <button>
@@ -127,7 +127,7 @@ const Form = () => {
               </button>
             ))}
             <div>
-              <span> Question {currentQuestion + 1}&nbsp; </span> / {questions.length}
+              <span> Frage {currentQuestion + 1}&nbsp; </span> / {questions.length}
             </div>
           </div>
           <div className='windowed'>
