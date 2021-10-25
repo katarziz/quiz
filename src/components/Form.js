@@ -105,7 +105,7 @@ const Form = () => {
             <button onClick={() => handleReset()}>
               Quiz neu starten
             </button>
-            <a href='https://github.com/Humboldt4Future' style={{ width: '100%' }}>
+            <a href='https://github.com/Humboldt4Future' style={{ width: '100%' }} target="_blank">
               <button style={{ marginLeft: '0' }}>
                 Schau dir unseren Code auf Github an
               </button>
