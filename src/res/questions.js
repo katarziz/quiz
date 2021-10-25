@@ -42,7 +42,7 @@ const questions = [
   {
     questionText: 'Wo wohnst du?',
     answerOptions: [
-      { answerText: 'In einem haus, aber mit vielen Leuten', value: 5 },
+      { answerText: 'In einem Haus, aber mit vielen Leuten', value: 5 },
       { answerText: 'In einer Wohnung', value: 3 },
       { answerText: 'In einem Haus', value: 0 },
     ],
@@ -74,9 +74,9 @@ const questions = [
   {
     questionText: 'Wie oft geht ihr in den Urlaub?',
     answerOptions: [
-      { answerText: 'Ein bis zwei ferien', value: 4 },
-      { answerText: 'Praktisch jede ferien', value: 1 },
-      { answerText: 'Jede ferien', value: 0 },
+      { answerText: 'Ein bis zwei Ferien', value: 4 },
+      { answerText: 'Praktisch jede Ferien', value: 1 },
+      { answerText: 'Jede Ferien', value: 0 },
     ],
   },
   {
@@ -88,11 +88,11 @@ const questions = [
     ],
   },
   {
-    questionText: 'Denkt ihr an die 3 Rs: Reduce, Reuse, Recycle?',
+    questionText: 'Denkt ihr an die 3 Rs\': Reduce, Reuse, Recycle?',
     answerOptions: [
       { answerText: 'Immer', value: 10 },
       { answerText: 'Oft', value: 5 },
-      { answerText: 'Selten', value: 0 },
+      { answerText: 'Zu Selten', value: 0 },
     ],
   },
   {

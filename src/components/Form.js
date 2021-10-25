@@ -99,7 +99,7 @@ const Form = () => {
               </button>
               :
               <button disabled>
-                Danke, dass sie ihr Ergebnis geteilt haben
+                Danke, dass Sie Ihr Ergebnis geteilt haben
               </button>
             }
             <button onClick={() => handleReset()}>
