@@ -74,9 +74,9 @@ const questions = [
   {
     questionText: 'Wie oft geht ihr in den Urlaub?',
     answerOptions: [
-      { answerText: 'Ein bis zwei Ferien', value: 4 },
-      { answerText: 'Praktisch jede Ferien', value: 1 },
-      { answerText: 'Jede Ferien', value: 0 },
+      { answerText: 'Selten', value: 4 },
+      { answerText: 'Hin und wieder', value: 1 },
+      { answerText: 'Oft', value: 0 },
     ],
   },
   {
