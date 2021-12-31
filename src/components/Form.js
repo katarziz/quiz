@@ -10,7 +10,7 @@ const Form = () => {
   const [entryData, setEntryData] = useState([]);
 
   const handleAnswerButtonClick = (value, answerText) => {
-    switch (currentQuestion) {
+    /*switch (currentQuestion) {
       case 0: case 15:
         setCurrentInfo(0);
         break;
@@ -34,17 +34,56 @@ const Form = () => {
         break;
       default:
         break;
-    }
-    setScore(score + value);
+    }*/
+    //setScore(score + value);
     var inc = 1;
     setEntryData(entryData => [...entryData, { answer: answerText }]);
-    if (currentQuestion === 0 && value > 0) {
+    switch (currentQuestion) {
+      case 0: case 5:
+        if (value >= 1)
+          inc = 3;
+        break;
+      case 6: case 10: case 16: case 19:
+        setBuffer(value); //init
+        break;
+      case 11: case 17: case 20:
+        setBuffer(buffer * value); //inc
+        break;
+      case 7: case 12: case 18: case 21:
+        setScore(score + (buffer * value)); //send and inc
+        break;
+      case 8: case 9: case 13: case 14: case 15:
+        setScore(score + value); //singles
+        break;
+      default:
+        break;
+    }
+    switch (currentQuestion + inc) {
+      case 5: case 6: case 7:
+        setCurrentInfo(0);
+      case 8:
+        setCurrentInfo(1);
+      case 10: case 11: case 12:
+        setCurrentInfo(2);
+      case 19: case 20: case 21:
+        setCurrentInfo(3);
+      case 13: case 14: case 15:
+        setCurrentInfo(4);
+      case 9: case 16: case 17: case 18:
+        setCurrentInfo(5);
+      case 0: case 1: case 2: case 3: case 4:
+        setCurrentInfo(6);
+    }
+    /*if (currentQuestion === 0 && value > 0) {
       inc = 2;
       setEntryData(entryData => [...entryData, { value: value }]);
       setCurrentInfo(1);
     } else if (currentQuestion === 14 && answerText === 'Ich gehe nicht zur Schule') {
       inc = 2;
       setEntryData(entryData => [...entryData, { value: value }]);
+    }*/
+    if (inc === 3) {
+      setEntryData(entryData => [...entryData, { answer: 'skipped' }, { answer: 'skipped' }]);
     }
     const nextQuestion = currentQuestion + inc;
     if (nextQuestion < questions.length) {
@@ -52,15 +91,16 @@ const Form = () => {
     } else {
       setShowScore(true);
     }
-    if (currentQuestion === 15 || (currentQuestion === 14 && inc === 2)) {
+    /*if (currentQuestion === 15 || (currentQuestion === 14 && inc === 2)) {
       setEntryData(entryData => [...entryData, { score: (score + value) }]);
-    }
+    }*/
+    console.log(buffer, score, value);
   };
 
   const handleSubmit = (e) => {
     setShowSubmit(false);
 
-    dispatch(createEntry({ ...entryData }));
+    dispatch(createEntry({ ...[...entryData, { score: score }, { v: '1.0' }] }));
   };
 
   const handleReset = (e) => {
@@ -77,7 +117,7 @@ const Form = () => {
 
   const [currentQuestion, setCurrentQuestion] = useState(0);
 
-  const [currentInfo, setCurrentInfo] = useState(0);
+  const [currentInfo, setCurrentInfo] = useState(6);
 
   const [showScore, setShowScore] = useState(false);
 
@@ -85,13 +125,15 @@ const Form = () => {
 
   const [score, setScore] = useState(0);
 
+  const [buffer, setBuffer] = useState(0);
+
   return (
     <>
       {showScore ?
         <>
           <div className='windowed'>
             <h3>
-              Du hast einen UmweltScore von <b>{Math.round(score / 76 * 100)}</b> Prozent erreicht
+              Mit deinen Angaben haben wir einen CO2-Verbrauch von {score} Kilogramm CO2-Äquivalent errechnen können
             </h3>
             {showSubmit ?
               <button onClick={() => handleSubmit()}>
@@ -105,7 +147,7 @@ const Form = () => {
             <button onClick={() => handleReset()}>
               Quiz neu starten
             </button>
-            <a href='https://github.com/Humboldt4Future' style={{ width: '100%' }} target="_blank">
+            <a href='https://github.com/Humboldt4Future' style={{ width: '100%' }} target="_blank" rel="noreferrer">
               <button style={{ marginLeft: '0' }}>
                 Schau dir unseren Code auf Github an
               </button>

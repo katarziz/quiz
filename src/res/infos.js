@@ -120,12 +120,16 @@ const infos = [
         Tips rausgesucht.`
     },
     {
-        thema: "schule",
-        text: `wir verwenden diese Daten 
-        ausschließlich um unsere Schule zu 
-        vergleichen. Niemand wird deine Antworten 
-        auf dich zurückführen können.`
-    },
+        thema: "datenschutz",
+        text: `Antworten auf diese Fragen 
+        verwenden wir ausschließlich für unsere 
+        Statistik. Auch können wir keine Antwort 
+        einer Person zuordnen. Nützlich sind 
+        solche Antworten, wenn man wissen will, 
+        ob z.B. wohlhabende Kinder an unserer 
+        Schule dazu tendieren mehr CO2 
+        auszustoßen.`
+    }
 ]
 
 export default infos;

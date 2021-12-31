@@ -1,132 +1,185 @@
 const questions = [
-  {
-    questionText: 'Ernährst du dich vegan oder vegetarisch?',
-    answerOptions: [
-      { answerText: 'Vegan', value: 10 },
-      { answerText: 'Vegetarisch', value: 8 },
-      { answerText: 'Keins von beidem', value: 0 },
-    ],
-  },
-  {
-    questionText: 'Wie oft isst du Fleisch?',
-    answerOptions: [
-      { answerText: 'Selten', value: 3 },
-      { answerText: 'Normal', value: 2 },
-      { answerText: 'Oft', value: 0 },
-    ],
-  },
-  {
-    questionText: 'Kaufst du Bio-Produkte?',
-    answerOptions: [
-      { answerText: 'Ja', value: 5 },
-      { answerText: 'Manchmal', value: 3 },
-      { answerText: 'Praktisch Nie', value: 0 },
-    ],
-  },
-  {
-    questionText: 'Kaufst du Saisonale Produkte?',
-    answerOptions: [
-      { answerText: 'Ja', value: 4 },
-      { answerText: 'Manchmal', value: 2 },
-      { answerText: 'Praktisch Nie', value: 0 },
-    ],
-  },
-  {
-    questionText: 'Wirfst du Essen weg?',
-    answerOptions: [
-      { answerText: 'Nein', value: 5 },
-      { answerText: 'Wenn es abgelaufen ist', value: 2 },
-      { answerText: 'Manchmal', value: 0 },
-    ],
-  },
-  {
-    questionText: 'Wo wohnst du?',
-    answerOptions: [
-      { answerText: 'In einem Haus, aber mit vielen Leuten', value: 5 },
-      { answerText: 'In einer Wohnung', value: 3 },
-      { answerText: 'In einem Haus', value: 0 },
-    ],
-  },
-  {
-    questionText: 'Wie lange heizt du?',
-    answerOptions: [
-      { answerText: 'Nie', value: 3 },
-      { answerText: 'Nur im Winter', value: 13 },
-      { answerText: 'Immer', value: 0 },
-    ],
-  },
-  {
-    questionText: 'Wie kommst du in die Schule?',
-    answerOptions: [
-      { answerText: 'Zu Fuß/Mit dem Rad', value: 3 },
-      { answerText: 'Mit den Öffentlichen', value: 4 },
-      { answerText: 'Ich werde gefahren', value: 0 },
-    ],
-  },
-  {
-    questionText: 'Fährt deine Familie viel mit dem Auto?',
-    answerOptions: [
-      { answerText: 'Nur für das nötigste', value: 5 },
-      { answerText: 'Des Öfteren', value: 2 },
-      { answerText: 'Für alles', value: 0 },
-    ],
-  },
-  {
-    questionText: 'Wie oft geht ihr in den Urlaub?',
-    answerOptions: [
-      { answerText: 'Selten', value: 4 },
-      { answerText: 'Hin und wieder', value: 1 },
-      { answerText: 'Oft', value: 0 },
-    ],
-  },
-  {
-    questionText: 'Wie geht es dann in den Urlaub?',
-    answerOptions: [
-      { answerText: 'Mit dem Zug', value: 2 },
-      { answerText: 'Mit dem Auto', value: 1 },
-      { answerText: 'Mit dem Flugzeug', value: 0 },
-    ],
-  },
-  {
-    questionText: 'Denkt ihr an die 3 Rs\': Reduce, Reuse, Recycle?',
-    answerOptions: [
-      { answerText: 'Immer', value: 10 },
-      { answerText: 'Oft', value: 5 },
-      { answerText: 'Zu Selten', value: 0 },
-    ],
-  },
-  {
-    questionText: 'Denkst du an die kleinen Dinge? Licht, Plastik',
-    answerOptions: [
-      { answerText: 'Immer', value: 10 },
-      { answerText: 'Oft', value: 5 },
-      { answerText: 'Selten', value: 0 },
-    ],
-  },
-  {
-    questionText: 'Setzt du dich für die Umwelt ein?',
-    answerOptions: [
-      { answerText: 'Immer wieder', value: 10 },
-      { answerText: 'Wenn ich gerade Lust habe', value: 3 },
-      { answerText: 'Zu wenig', value: 3 },
-    ],
-  },
-  {
-    questionText: 'Welche Schule besuchst du?',
-    answerOptions: [
-      { answerText: 'Das Humboldt-Gymnasium', value: 0 },
-      { answerText: 'Eine andere Schule', value: 0 },
-      { answerText: 'Ich gehe nicht zur Schule', value: 0 },
-    ],
-  },
-  {
-    questionText: 'Bist du in der Unter- Mittel- oder Oberstufe?',
-    answerOptions: [
-      { answerText: 'Unterstufe', value: 0 },
-      { answerText: 'Mittelstufe', value: 0 },
-      { answerText: 'Oberstufe', value: 0 },
-    ],
-  },
+	{//0
+		questionText: 'Bist du Schüler?',
+		answerOptions: [
+			{ answerText: 'Ja', value: 0 },
+			{ answerText: 'Nein', value: 1 },
+		],
+	},
+	{//1
+		questionText: 'In welche Stufe gehst du?',
+		answerOptions: [
+			{ answerText: 'Unterstufe', value: 0 },
+			{ answerText: 'Mittelstufe', value: 0 },
+			{ answerText: 'Oberstufe', value: 0 },
+		],
+	},
+	{//2
+		questionText: 'An welche Schule gehst du?',
+		answerOptions: [
+			{ answerText: 'Das HGV', value: 0 },
+			{ answerText: 'Ein anderes Gymnasium', value: 0 },
+			{ answerText: 'Eine Realschule', value: 0 },
+			{ answerText: 'Eine Hauptschule', value: 0 },
+			{ answerText: 'Etwas anderes', value: 0 },
+		],
+	},
+	{//3
+		questionText: 'Ist deine Familie wohlhabend?',
+		answerOptions: [
+			{ answerText: 'Ja, Geld spielt bei uns keine Rolle', value: 0 },
+			{ answerText: 'Eher durchschnittlich, aber keine finanziellen Probleme', value: 0 },
+			{ answerText: 'Nein, meine Eltern sind eher sparsam', value: 0 },
+		],
+	},
+	{//4
+		questionText: 'Warst du schon einmal auf einer Klimademo?',
+		answerOptions: [
+			{ answerText: 'Nein, noch nie', value: 0 },
+			{ answerText: 'Ja, einmal', value: 0 },
+			{ answerText: 'Ja, sogar mehrmals', value: 0 },
+		],
+	},
+	{//5
+		questionText: 'Wie ernährst du dich?',
+		answerOptions: [
+			{ answerText: 'Vegan', value: 1 },
+			{ answerText: 'Vegetarisch', value: 1 },
+			{ answerText: 'Fleisch', value: 0 },
+		],
+	},
+	{//6
+		questionText: 'Wie oft in der Woche isst du Fleisch?',
+		answerOptions: [
+			{ answerText: '1-2 Tage', value: 3 },
+			{ answerText: '2-4 Tage', value: 6 },
+			{ answerText: '4-7 Tage', value: 12 },
+		],
+	},
+	{//7
+		questionText: 'Wie viel Fleisch isst du an diesen Tagen?',
+		answerOptions: [
+			{ answerText: 'reduzierter Fleischkonsum', value: 8 },
+			{ answerText: 'normaler Fleischkonsum', value: 23 },
+			{ answerText: 'erhöhter Fleischkonsum', value: 52 },
+		],
+	},
+	{//8
+		questionText: 'Nimmst du Milchprodukte zu dir?',
+		answerOptions: [
+			{ answerText: 'Ja', value: 78 },
+			{ answerText: 'Nein', value: 0 },
+			{ answerText: 'Milchersatzprodukte', value: 8 },
+		],
+	},
+	{//9
+		questionText: 'Was würdest du machen, wenn ein Gerät (z.B. Handy) kaputt geht?',
+		answerOptions: [
+			{ answerText: 'Ein neues kaufen', value: 67 },
+			{ answerText: 'Es reparieren lassen', value: 15 },
+			{ answerText: 'Ein gebrauchtes Gerät kaufen', value: 24 },
+		],
+	},
+	{//10
+		questionText: 'Wie viel Wohnfläche hat deine Wohnung/Haus schätzungsweise?',
+		answerOptions: [
+			{ answerText: 'weniger als 75 Quadratmeter', value: 50 },
+			{ answerText: 'weniger als 125 Quadratmeter', value: 100 },
+			{ answerText: 'mehr als 125 Quadratmeter', value: 150 },
+			{ answerText: 'Weiß ich nicht', value: 65 },
+		],
+	},
+	{//11
+		questionText: 'Wie alt ist dein Haus?',
+		answerOptions: [
+			{ answerText: 'weniger als 25 Jahre', value: 13 },
+			{ answerText: '25 bis 50 Jahre', value: 21 },
+			{ answerText: 'mehr als 50 Jahre', value: 23 },
+			{ answerText: 'Weiß ich nicht', value: 21 },
+		],
+	},
+	{//12
+		questionText: 'Mit was heizt du?',
+		answerOptions: [
+			{ answerText: 'Öl/Gas', value: 3 },
+			{ answerText: 'Elektrisch', value: 6},
+			{ answerText: 'keins von beidem', value: 1 },
+		],
+	},
+	{//13
+		questionText: 'Wie oft fliegst du in einem Jahr?',
+		answerOptions: [
+			{ answerText: 'Nie', value: 0 },
+			{ answerText: 'Selten', value: 500},
+			{ answerText: 'Oft', value: 1000},
+		],
+	},
+	{//14
+		questionText: 'Wie oft fliegst du innerhalb von Europa?',
+		answerOptions: [
+			{ answerText: 'Nie', value: 0},
+			{ answerText: 'Selten', value: 1500},
+			{ answerText: 'Oft', value: 3000},
+		],
+	},
+	{//15
+		questionText: 'Wie oft fliegst du international?',
+		answerOptions: [
+			{ answerText: 'Nie', value: 0},
+			{ answerText: 'Selten', value: 4000},
+			{ answerText: 'Oft', value: 12000},
+		],
+	},
+	{//16
+		questionText: 'Wie viele Kleidungsstücke kaufst du im Jahr?',
+		answerOptions: [
+			{ answerText: 'weniger als fünf', value: 1 },
+			{ answerText: 'fünf bis zehn', value: 2 },
+			{ answerText: 'zehn bis fünfzehn', value: 3 },
+			{ answerText: 'fünfzehn bis zwanzig', value: 4 },
+			{ answerText: 'Weiß ich nicht', value: 2 },
+		],
+	},
+	{//17
+		questionText: 'Bestehen deine Klamotten eher aus Baumwolle oder Kunstfaser?',
+		answerOptions: [
+			{ answerText: 'Baumwolle', value: 3 },
+			{ answerText: 'Kunstfaser', value: 7 },
+			{ answerText: 'Weiß ich nicht', value: 5 },
+		],
+	},
+	{//18
+		questionText: 'Kaufst du eher neu oder second hand?',
+		answerOptions: [
+			{ answerText: 'neu', value: 4 },
+			{ answerText: 'second hand', value: 1 },
+		],
+	},
+	{//19
+		questionText: 'Wie lang ist dein Schulweg?',
+		answerOptions: [
+			{ answerText: 'unter einem Kilometer', value: 0 },
+			{ answerText: 'ein bis fünf Kilometer', value: 1 },
+			{ answerText: 'fünf bis zehn Kilometer', value: 2 },
+			{ answerText: 'mehr als zehn Kilometer', value: 3 },
+		],
+	},
+	{//20
+		questionText: 'Wie kommst du zur Schule?',
+		answerOptions: [
+			{ answerText: 'Mit dem Fahrrad', value: 0 },
+			{ answerText: 'Mit dem Auto', value: 10 },
+			{ answerText: 'Mit den Öffentlichen', value: 4 },
+		],
+	},
+	{//21
+		questionText: 'Aus welcher Klasse kommt dein/das Auto deiner Eltern?',
+		answerOptions: [
+			{ answerText: 'Kleinwagen', value: 9 },
+			{ answerText: 'Mittelklasse', value: 10 },
+			{ answerText: 'Oberklasse', value: 14 },
+		],
+	},
 ]
 
 export default questions;
